@@ -10,13 +10,15 @@ import { RegistroScreenComponent } from './screens/registro-screen/registro-scre
 //Angular Material
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
+import { NuevoLoginScreenComponent } from './screens/nuevo-login-screen/nuevo-login-screen.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginScreenComponent,
     HomeScreenComponent,
-    RegistroScreenComponent
+    RegistroScreenComponent,
+    NuevoLoginScreenComponent
   ],
   imports: [
     BrowserModule,

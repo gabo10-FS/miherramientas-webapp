@@ -28,6 +28,7 @@ export class LoginScreenComponent implements OnInit {
     if(this.password == ""){
       this.errors.password = "Campo requerido";
     }
+    this.router.navigate(["nuevologin"])
   }
 
   public showPassword(){

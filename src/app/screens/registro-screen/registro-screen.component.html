@@ -1,0 +1,84 @@
+<section class="registro-user">
+    <div class="wrapper">
+        <!--va a englobar todo el formulario con la cabecera-->
+        <div class="section-registro">
+            <div class="header-registro">
+                <mat-icon class="icon-back" (click)="regresar()">arrow_back</mat-icon>
+                <span *ngIf="!editar" class="title">Registrarse</span>
+                <span *ngIf="editar" class="title">Actualizar Usuario</span>
+                <mat-icon class="icon-forward" (click)="regresar()">arrow_forward</mat-icon>
+            </div>
+            <div class="body-registro">
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>Id/Matricula</mat-label>
+                    <input matInput [(ngModel)]="user.matricula" name="id" placeholder="Escribe Id o matricula">
+                    <div *ngIf="errors.matricula" class=""></div>
+                </mat-form-field>
+
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput [(ngModel)]="user.first_name" placeholder="Escribe tu nombre">
+                </mat-form-field>
+
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>Apellido</mat-label>
+                    <input matInput [(ngModel)]="user.last_name" placeholder="Escribe tu apellido">
+                </mat-form-field>
+
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>Correo electrónico</mat-label>
+                    <input matInput [(ngModel)]="user.email" placeholder="Escribe tu correo">
+                </mat-form-field>
+
+                <mat-form-field class="mat-input" appearance="outline" *ngIf="!editar">
+                    <mat-label>Contraseña</mat-label>
+                    <input matInput [(ngModel)]="user.password" type="{{inputType_1}}" placeholder="Escribe tu contraseña">
+                    <mat-icon matSuffix class="eye-icon" (click)="showPassword()">{{hide_1 ? 'visibility_off': 'visibility'}}</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field class="mat-input" appearance="outline" *ngIf="!editar">
+                    <mat-label>Confirmar contraseña</mat-label>
+                    <input matInput [(ngModel)]="user.confirmar_password" type="{{inputType_2}}" placeholder="Confirma tu contraseña">
+                    <mat-icon matSuffix class="eye-icon" (click)="showPwdConfirmar()">{{hide_2 ? 'visibility_off': 'visibility'}}</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>Fecha de nacimiento</mat-label>
+                    <input matInput [matDatepicker]="picker" [(ngModel)]="user.fecha_nacimiento" (focus)="picker.open()" placeholder="Agregar fecha" (dateChange)="changeFecha($event)" type="string">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>                  
+
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>CURP</mat-label>
+                    <input matInput [(ngModel)]="user.curp" placeholder="Escribe tu CURP">
+                </mat-form-field>
+
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>RFC</mat-label>
+                    <input matInput [(ngModel)]="user.rfc" placeholder="Escribe tu RFC">
+                </mat-form-field>
+
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>Edad</mat-label>
+                    <input matInput [(ngModel)]="user.edad" placeholder="Escribe tu edad">
+                </mat-form-field>
+
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>Teléfono</mat-label>
+                    <input matInput [(ngModel)]="user.telefono" placeholder="Escribe tu número de teléfono">
+                </mat-form-field>
+
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>Ocupación</mat-label>
+                    <input matInput [(ngModel)]="user.ocupacion" placeholder="Escribe tu ocupación">
+                </mat-form-field>
+
+                <div class="buttons">
+                    <button class="btn btn-danger" (click)="regresar()">Cancelar</button>
+                    <button *ngIf="!editar" class="btn btn-primary" type="submit" (click)="registrar()">Registrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

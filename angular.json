@@ -30,7 +30,14 @@
               "src/assets"
             ],
             "styles": [
+<<<<<<< Updated upstream
               "src/styles.scss"
+=======
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.scss",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/bootstrap-icons/font/bootstrap-icons.css"
+>>>>>>> Stashed changes
             ],
             "scripts": []
           },
@@ -93,7 +100,14 @@
               "src/assets"
             ],
             "styles": [
+<<<<<<< Updated upstream
               "src/styles.scss"
+=======
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.scss",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/bootstrap-icons/font/bootstrap-icons.css"
+>>>>>>> Stashed changes
             ],
             "scripts": []
           }

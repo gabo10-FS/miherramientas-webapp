@@ -7,7 +7,11 @@ import { AppComponent } from './app.component';
 //Componentes
 import { LoginScreenComponent } from './screens/login-screen/login-screen.component';
 import { RegistroScreenComponent } from './screens/registro-screen/registro-screen.component';
+<<<<<<< Updated upstream
 //import { HomeScreenComponent } from './screens/home-screen/home-screen.component';
+=======
+import { HomeScreenComponent } from './screens/home-screen/home-screen.component';
+>>>>>>> Stashed changes
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //Angular material
 import {MatInputModule} from '@angular/material/input';
@@ -21,12 +25,20 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { NgxMaskModule, IConfig } from 'ngx-mask';
 //Options mask
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 @NgModule({
   declarations: [
     AppComponent,
     LoginScreenComponent,
     RegistroScreenComponent,
+<<<<<<< Updated upstream
     //HomeScreenComponent
+=======
+    HomeScreenComponent
+>>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,

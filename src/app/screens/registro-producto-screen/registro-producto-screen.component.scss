@@ -10,13 +10,18 @@
 }
 
 .container{
-    width: 50%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     gap: 3rem;
+    background-image: url("/assets/images/fondo-tienda.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .foto-product{
@@ -31,6 +36,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    background-color: rgba(163, 184, 196, 0.514);
 }
 
 .header-registro{

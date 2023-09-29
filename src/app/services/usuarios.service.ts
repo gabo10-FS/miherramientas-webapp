@@ -124,12 +124,14 @@ public validarProduct(data: any){
 
   if(!this.validatorService.required(data["nombre"])){
     error["nombre"] = this.errorService.required;
-  }else if(!this.validatorService.min(data["rfc"], 3)){
+  }else if(!this.validatorService.min(data["nombre"], 3)){
     error["nombre"] = this.errorService.min(12);
-    alert("La longitud de caracteres deL RFC es menor, deben ser 3");
+    alert("La longitud de caracteres deL NOMBRE es menor, deben ser 3");
   }else if(!this.validatorService.max(data["nombre"], 20)){
     error["nombre"] = this.errorService.max(13);
-    alert("La longitud de caracteres deL RFC es mayor, deben ser 20");
+    alert("La longitud de caracteres deL NOMBRE es mayor, deben ser 20");
+  }else if(this.validatorService.numeric(data["nombre"])){
+    alert("El formato NOMBRE no admite números");
   }
 
   if(!this.validatorService.required(data["precio"])){
@@ -142,10 +144,12 @@ public validarProduct(data: any){
     error["departamento"] = this.errorService.required;
   }else if(!this.validatorService.min(data["departamento"], 3)){
     error["departamento"] = this.errorService.min(12);
-    alert("La longitud de caracteres deL RFC es menor, deben ser 3");
+    alert("La longitud de caracteres deL DEPARTAMENTO es menor, deben ser 3");
   }else if(!this.validatorService.max(data["departamento"], 20)){
     error["departamento"] = this.errorService.max(13);
-    alert("La longitud de caracteres deL RFC es mayor, deben ser 20");
+    alert("La longitud de caracteres deL DEPARTAMENTO es mayor, deben ser 20");
+  }else if(this.validatorService.numeric(data["nombre"])){
+    alert("El formato DEPARTAMENTO no admite números");
   }
 
   return error;

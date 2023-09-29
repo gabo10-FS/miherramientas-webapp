@@ -34,7 +34,7 @@ export class LoginScreenComponent implements OnInit {
       return false;
     }
     //Si pasa la validación
-    this.router.navigate(["home"]);
+    this.router.navigate(["registroproducto"]);
   }
 
   public showPassword(){

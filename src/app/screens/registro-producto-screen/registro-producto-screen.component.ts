@@ -42,6 +42,7 @@ export class RegistroProductoScreenComponent implements OnInit {
       //Pasa la validación y sale de la función
       return false;
     }
+    alert("Todo en orden :)");
   }
 
 }

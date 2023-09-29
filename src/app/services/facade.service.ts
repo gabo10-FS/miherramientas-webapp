@@ -25,7 +25,7 @@ export class FacadeService {
       error["username"] = this.errorService.required;
     }else if(!this.validatorService.max(data["username"], 40)){
       error["username"] = this.errorService.max(40);
-    }else if (!this.validatorService.email(data['username'])) {
+    }else if (!this.validatorService.email(data["username"])) {
       error['username'] = this.errorService.email;
     }
 

@@ -27,7 +27,7 @@
         
                     <mat-form-field class="mat-input" appearance="outline">
                         <mat-label>Precio</mat-label>
-                        <input matInput [(ngModel)]="user.precio" mask='$000.00' placeholder="Escribe precio">
+                        <input matInput [(ngModel)]="user.precio" mask="000.00" placeholder="Escribe precio">
                     </mat-form-field>
                     <div *ngIf="errors.precio" class="invalid-feedback d-block">{{ errors.precio }}</div>
         

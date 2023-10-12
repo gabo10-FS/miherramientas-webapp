@@ -76,7 +76,7 @@
     
                 <mat-form-field class="mat-input" appearance="outline">
                     <mat-label>Teléfono</mat-label>
-                    <input matInput [(ngModel)]="user.telefono"  placeholder="Escribe teléfono" id="telef">
+                    <input matInput [(ngModel)]="user.telefono"  mask="(000) 000 00 00" placeholder="Escribe teléfono" id="telef">
                 </mat-form-field>
                 <div *ngIf="errors.telefono" class="invalid-feedback d-block">{{ errors.telefono }}</div>
     
